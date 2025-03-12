@@ -24,6 +24,7 @@ import FacultyAttendance from "./Faculty Dashboard/Pages/FacultyAttendance";
 import FacultyAnnouncements from "./Faculty Dashboard/Pages/FacultyAnnouncements";
 import FacultySidebar from "./Faculty Dashboard/Components/Sidebar";
 import FacultyNavbar from "./Faculty Dashboard/Components/Navbar";
+import AdminNavbar from"./Admin Dashboard/AdminComponents/AdminNavbar";
 
 // ✅ Function to check if user is authenticated
 const isAuthenticated = () => {
@@ -89,6 +90,9 @@ const App = () => {
         <Route path="/faculty-timetable" element={<PrivateRoute element={<FacultyTimetable />} role="faculty" />} />
         <Route path="/faculty-attendance" element={<PrivateRoute element={<FacultyAttendance />} role="faculty" />} />
         <Route path="/faculty-announcements" element={<PrivateRoute element={<FacultyAnnouncements />} role="faculty" />} />
+
+
+        
       </Routes>
     </Router>
   );
